@@ -1,0 +1,75 @@
+Script started on 2021-08-27 22:55:04+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="242" LINES="24"]
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ tcpdump -i lo -v
+tcpdump: lo: You don't have permission to capture on that device
+(socket: Operation not permitted)
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ tcpdump -i lo -v[1@s[1@u[1@d[1@o[1@ 
+[sudo] password for user: 
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+22:55:32.229955 IP (tos 0x0, ttl 64, id 4301, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.34326 > localhost.http: Flags [S], cksum 0xfe30 (incorrect -> 0xbd5d), seq 3576204039, win 65495, options [mss 65495,sackOK,TS val 384931100 ecr 0,nop,wscale 7], length 0
+22:55:32.229971 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.http > localhost.34326: Flags [S.], cksum 0xfe30 (incorrect -> 0x9735), seq 3451038818, ack 3576204040, win 65483, options [mss 65495,sackOK,TS val 384931100 ecr 384931100,nop,wscale 7], length 0
+22:55:32.229984 IP (tos 0x0, ttl 64, id 4302, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34326 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0xbdf1), ack 1, win 512, options [nop,nop,TS val 384931100 ecr 384931100], length 0
+22:55:32.230367 IP (tos 0x0, ttl 64, id 4303, offset 0, flags [DF], proto TCP (6), length 653)
+    localhost.34326 > localhost.http: Flags [P.], cksum 0x0082 (incorrect -> 0xb998), seq 1:602, ack 1, win 512, options [nop,nop,TS val 384931101 ecr 384931100], length 601: HTTP, length: 601
+	POST /action_page.php HTTP/1.1
+	Host: 127.0.0.1
+	User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+	Accept-Language: en-US,en;q=0.5
+	Accept-Encoding: gzip, deflate
+	Content-Type: application/x-www-form-urlencoded
+	Content-Length: 33
+	Origin: http://127.0.0.1
+	Connection: keep-alive
+	Referer: http://127.0.0.1/
+	Upgrade-Insecure-Requests: 1
+	Sec-Fetch-Dest: document
+	Sec-Fetch-Mode: navigate
+	Sec-Fetch-Site: same-origin
+	Sec-Fetch-User: ?1
+	
+	anvandarnamn=admin&losenord=admin[!http]
+22:55:32.230397 IP (tos 0x0, ttl 64, id 60781, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34326: Flags [.], cksum 0xfe28 (incorrect -> 0xbb9b), ack 602, win 507, options [nop,nop,TS val 384931101 ecr 384931101], length 0
+22:55:32.231227 IP (tos 0x0, ttl 64, id 60782, offset 0, flags [DF], proto TCP (6), length 422)
+    localhost.http > localhost.34326: Flags [P.], cksum 0xff9a (incorrect -> 0x0bd7), seq 1:371, ack 602, win 512, options [nop,nop,TS val 384931101 ecr 384931101], length 370: HTTP, length: 370
+	HTTP/1.1 200 OK
+	Date: Fri, 27 Aug 2021 20:55:32 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 118
+	Keep-Alive: timeout=5, max=100
+	Connection: Keep-Alive
+	Content-Type: text/html; charset=UTF-8
+	
+22:55:32.231237 IP (tos 0x0, ttl 64, id 4304, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34326 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0xba26), ack 371, win 510, options [nop,nop,TS val 384931101 ecr 384931101], length 0
+22:55:37.233367 IP (tos 0x0, ttl 64, id 60783, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34326: Flags [F.], cksum 0xfe28 (incorrect -> 0xa698), seq 371, ack 602, win 512, options [nop,nop,TS val 384936104 ecr 384931101], length 0
+22:55:37.233381 IP (tos 0x0, ttl 64, id 4305, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34326 > localhost.http: Flags [F.], cksum 0xfe28 (incorrect -> 0xa698), seq 602, ack 371, win 512, options [nop,nop,TS val 384936104 ecr 384931101], length 0
+22:55:37.233397 IP (tos 0x0, ttl 64, id 60784, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34326: Flags [.], cksum 0xfe28 (incorrect -> 0x930c), ack 603, win 512, options [nop,nop,TS val 384936104 ecr 384936104], length 0
+22:55:37.233401 IP (tos 0x0, ttl 64, id 4306, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34326 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x930c), ack 372, win 512, options [nop,nop,TS val 384936104 ecr 384936104], length 0
+22:55:41.856862 IP (tos 0x0, ttl 255, id 4835, offset 0, flags [DF], proto UDP (17), length 73)
+    localhost.mdns > 224.0.0.251.mdns: 0 [2q] PTR (QM)? _ipp._tcp.local. PTR (QM)? _ipps._tcp.local. (45)
+22:55:41.857321 IP (tos 0x0, ttl 64, id 6603, offset 0, flags [DF], proto UDP (17), length 81)
+    localhost.42481 > localhost.domain: 50524+ [1au] PTR? 251.0.0.224.in-addr.arpa. (53)
+22:55:41.864223 IP (tos 0x0, ttl 64, id 54478, offset 0, flags [DF], proto UDP (17), length 81)
+    localhost.domain > localhost.42481: 50524 NXDomain 0/0/1 (53)
+22:55:41.864528 IP (tos 0x0, ttl 64, id 6604, offset 0, flags [DF], proto UDP (17), length 80)
+    localhost.43374 > localhost.domain: 35844+ [1au] PTR? 53.0.0.127.in-addr.arpa. (52)
+22:55:41.864601 IP (tos 0x0, ttl 64, id 54479, offset 0, flags [DF], proto UDP (17), length 103)
+    localhost.domain > localhost.43374: 35844 1/0/1 53.0.0.127.in-addr.arpa. PTR localhost. (75)
+^C
+16 packets captured
+32 packets received by filter
+0 packets dropped by kernel
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-08-27 22:55:44+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,455 @@
+Script started on 2021-08-27 22:31:18+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ tcpdump -i -[Klo -v
+tcpdump: lo: You don't have permission to capture on that device
+(socket: Operation not permitted)
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ tcpdump -i lo -v[1@s[1@u[1@d[1@o[1@ 
+[sudo] password for user: 
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+22:31:51.030306 IP (tos 0x0, ttl 64, id 8474, offset 0, flags [DF], proto UDP (17), length 86)
+    localhost.45275 > localhost.domain: 61775+ [1au] AAAA? connectivity-check.ubuntu.com. (58)
+22:31:51.030873 IP (tos 0x0, ttl 64, id 8475, offset 0, flags [DF], proto UDP (17), length 80)
+    localhost.54388 > localhost.domain: 25153+ [1au] PTR? 53.0.0.127.in-addr.arpa. (52)
+22:31:51.030948 IP (tos 0x0, ttl 64, id 22573, offset 0, flags [DF], proto UDP (17), length 103)
+    localhost.domain > localhost.54388: 25153 1/0/1 53.0.0.127.in-addr.arpa. PTR localhost. (75)
+22:31:51.034250 IP (tos 0x0, ttl 64, id 22574, offset 0, flags [DF], proto UDP (17), length 86)
+    localhost.domain > localhost.45275: 61775 0/0/1 (58)
+22:33:53.166181 IP (tos 0x0, ttl 64, id 33365, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.59753 > localhost.domain: 51268+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:33:53.166181 IP (tos 0x0, ttl 64, id 33364, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.60184 > localhost.domain: 43333+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:33:53.166435 IP (tos 0x0, ttl 64, id 33366, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.35465 > localhost.domain: 29335+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:33:53.174851 IP (tos 0x0, ttl 64, id 43624, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.60184: 43333 NXDomain 0/0/1 (57)
+22:33:53.174901 IP (tos 0x0, ttl 64, id 43625, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.59753: 51268 NXDomain 0/0/1 (59)
+22:33:53.175279 IP (tos 0x0, ttl 64, id 33367, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.51224 > localhost.domain: 56951+ [1au] A? ppa.launchpad.net. (46)
+22:33:53.175284 IP (tos 0x0, ttl 64, id 33368, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.51224 > localhost.domain: 21880+ [1au] AAAA? ppa.launchpad.net. (46)
+22:33:53.175338 IP (tos 0x0, ttl 64, id 43626, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.35465: 29335 NXDomain 0/0/1 (61)
+22:33:53.175354 IP (tos 0x0, ttl 64, id 33369, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.42906 > localhost.domain: 32435+ [1au] A? security.ubuntu.com. (48)
+22:33:53.175359 IP (tos 0x0, ttl 64, id 33370, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.42906 > localhost.domain: 11957+ [1au] AAAA? security.ubuntu.com. (48)
+22:33:53.175454 IP (tos 0x0, ttl 64, id 43627, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.51224: 56951 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:33:53.175509 IP (tos 0x0, ttl 64, id 43628, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.51224: 21880 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:33:53.175696 IP (tos 0x0, ttl 64, id 33371, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.47037 > localhost.domain: 2977+ [1au] A? se.archive.ubuntu.com. (50)
+22:33:53.175701 IP (tos 0x0, ttl 64, id 33372, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.47037 > localhost.domain: 64160+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:33:53.175818 IP (tos 0x0, ttl 64, id 43629, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.47037: 2977 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:33:53.182753 IP (tos 0x0, ttl 64, id 43631, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.47037: 64160 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::165, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::173 (162)
+22:33:53.210960 IP (tos 0x0, ttl 64, id 43637, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.42906: 32435 2/0/1 security.ubuntu.com. A 91.189.91.38, security.ubuntu.com. A 91.189.91.39 (80)
+22:33:53.211020 IP (tos 0x0, ttl 64, id 43638, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.42906: 11957 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::18, security.ubuntu.com. AAAA 2001:67c:1562::15 (104)
+22:33:58.401936 IP (tos 0x0, ttl 64, id 33397, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.34222 > localhost.domain: 22092+ [1au] A? launchpad.net. (42)
+22:33:58.401961 IP (tos 0x0, ttl 64, id 33398, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.34222 > localhost.domain: 37559+ [1au] AAAA? launchpad.net. (42)
+22:33:58.402232 IP (tos 0x0, ttl 64, id 44586, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.34222: 22092 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:33:58.435764 IP (tos 0x0, ttl 64, id 44589, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.34222: 37559 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8003, launchpad.net. AAAA 2001:67c:1560:8003::8004 (98)
+22:33:58.692392 IP (tos 0x0, ttl 64, id 33401, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.38954 > localhost.domain: 51579+ [1au] A? launchpad.net. (42)
+22:33:58.692580 IP (tos 0x0, ttl 64, id 44627, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.38954: 51579 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:33:58.692613 IP (tos 0x0, ttl 64, id 33402, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.38954 > localhost.domain: 14962+ [1au] AAAA? launchpad.net. (42)
+22:33:58.692671 IP (tos 0x0, ttl 64, id 44628, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.38954: 14962 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:33:58.969566 IP (tos 0x0, ttl 64, id 33458, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.53026 > localhost.domain: 19078+ [1au] A? launchpad.net. (42)
+22:33:58.969589 IP (tos 0x0, ttl 64, id 33459, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.53026 > localhost.domain: 48541+ [1au] AAAA? launchpad.net. (42)
+22:33:58.969755 IP (tos 0x0, ttl 64, id 44669, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.53026: 19078 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:33:58.969813 IP (tos 0x0, ttl 64, id 44670, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.53026: 48541 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:33:59.169636 IP (tos 0x0, ttl 64, id 33496, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.40866 > localhost.domain: 35410+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:33:59.169643 IP (tos 0x0, ttl 64, id 33498, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.56959 > localhost.domain: 50001+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:33:59.169648 IP (tos 0x0, ttl 64, id 33497, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.55185 > localhost.domain: 60241+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:33:59.177050 IP (tos 0x0, ttl 64, id 44695, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.40866: 35410 NXDomain 0/0/1 (59)
+22:33:59.177693 IP (tos 0x0, ttl 64, id 44696, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.56959: 50001 NXDomain 0/0/1 (61)
+22:33:59.177747 IP (tos 0x0, ttl 64, id 44697, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.55185: 60241 NXDomain 0/0/1 (57)
+22:33:59.177854 IP (tos 0x0, ttl 64, id 33500, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.46047 > localhost.domain: 20048+ [1au] A? security.ubuntu.com. (48)
+22:33:59.178120 IP (tos 0x0, ttl 64, id 33501, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.46047 > localhost.domain: 855+ [1au] AAAA? security.ubuntu.com. (48)
+22:33:59.178321 IP (tos 0x0, ttl 64, id 44698, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.46047: 20048 2/0/1 security.ubuntu.com. A 91.189.91.39, security.ubuntu.com. A 91.189.91.38 (80)
+22:33:59.178368 IP (tos 0x0, ttl 64, id 44699, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.46047: 855 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::15, security.ubuntu.com. AAAA 2001:67c:1562::18 (104)
+22:33:59.178588 IP (tos 0x0, ttl 64, id 33502, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.48750 > localhost.domain: 42458+ [1au] A? ppa.launchpad.net. (46)
+22:33:59.178638 IP (tos 0x0, ttl 64, id 33503, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.54659 > localhost.domain: 51948+ [1au] A? se.archive.ubuntu.com. (50)
+22:33:59.178671 IP (tos 0x0, ttl 64, id 44700, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.48750: 42458 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:33:59.178708 IP (tos 0x0, ttl 64, id 33504, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.54659 > localhost.domain: 40682+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:33:59.178742 IP (tos 0x0, ttl 64, id 44701, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.54659: 51948 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:33:59.178816 IP (tos 0x0, ttl 64, id 44702, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.54659: 40682 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::173, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::165 (162)
+22:33:59.178948 IP (tos 0x0, ttl 64, id 33505, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.48750 > localhost.domain: 62936+ [1au] AAAA? ppa.launchpad.net. (46)
+22:33:59.179002 IP (tos 0x0, ttl 64, id 44703, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.48750: 62936 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:35:00.265255 IP (tos 0x0, ttl 64, id 45444, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.60595 > localhost.domain: 22066+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:35:00.265256 IP (tos 0x0, ttl 64, id 45445, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.35294 > localhost.domain: 26686+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:35:00.265256 IP (tos 0x0, ttl 64, id 45443, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.55109 > localhost.domain: 32055+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:35:00.272304 IP (tos 0x0, ttl 64, id 58635, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.55109: 32055 NXDomain 0/0/1 (59)
+22:35:00.272828 IP (tos 0x0, ttl 64, id 58636, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.35294: 26686 NXDomain 0/0/1 (57)
+22:35:00.273051 IP (tos 0x0, ttl 64, id 45446, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.46340 > localhost.domain: 17162+ [1au] A? security.ubuntu.com. (48)
+22:35:00.273062 IP (tos 0x0, ttl 64, id 45447, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.46340 > localhost.domain: 15895+ [1au] AAAA? security.ubuntu.com. (48)
+22:35:00.273426 IP (tos 0x0, ttl 64, id 58637, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.60595: 22066 NXDomain 0/0/1 (61)
+22:35:00.273480 IP (tos 0x0, ttl 64, id 45448, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.46353 > localhost.domain: 54428+ [1au] A? ppa.launchpad.net. (46)
+22:35:00.273562 IP (tos 0x0, ttl 64, id 58638, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.46353: 54428 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:35:00.273578 IP (tos 0x0, ttl 64, id 45449, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.46353 > localhost.domain: 35994+ [1au] AAAA? ppa.launchpad.net. (46)
+22:35:00.273622 IP (tos 0x0, ttl 64, id 58639, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.46353: 35994 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:35:00.273817 IP (tos 0x0, ttl 64, id 45450, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.33972 > localhost.domain: 32203+ [1au] A? se.archive.ubuntu.com. (50)
+22:35:00.273828 IP (tos 0x0, ttl 64, id 45451, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.33972 > localhost.domain: 14793+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:35:00.273923 IP (tos 0x0, ttl 64, id 58640, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.33972: 32203 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:35:00.273999 IP (tos 0x0, ttl 64, id 58641, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.33972: 14793 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::173, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::165 (162)
+22:35:00.276201 IP (tos 0x0, ttl 64, id 58642, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.46340: 17162 2/0/1 security.ubuntu.com. A 91.189.91.38, security.ubuntu.com. A 91.189.91.39 (80)
+22:35:00.277000 IP (tos 0x0, ttl 64, id 58643, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.46340: 15895 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::15, security.ubuntu.com. AAAA 2001:67c:1562::18 (104)
+22:35:05.304056 IP (tos 0x0, ttl 64, id 46254, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.54893 > localhost.domain: 44162+ [1au] A? launchpad.net. (42)
+22:35:05.304081 IP (tos 0x0, ttl 64, id 46255, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.54893 > localhost.domain: 43198+ [1au] AAAA? launchpad.net. (42)
+22:35:05.304282 IP (tos 0x0, ttl 64, id 59198, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.54893: 44162 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:05.338178 IP (tos 0x0, ttl 64, id 59202, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.54893: 43198 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8003, launchpad.net. AAAA 2001:67c:1560:8003::8004 (98)
+22:35:05.696875 IP (tos 0x0, ttl 64, id 46290, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.45014 > localhost.domain: 29764+ [1au] A? launchpad.net. (42)
+22:35:05.697098 IP (tos 0x0, ttl 64, id 59292, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.45014: 29764 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:05.697127 IP (tos 0x0, ttl 64, id 46291, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.45014 > localhost.domain: 55386+ [1au] AAAA? launchpad.net. (42)
+22:35:05.697220 IP (tos 0x0, ttl 64, id 59293, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.45014: 55386 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:35:05.962254 IP (tos 0x0, ttl 64, id 46295, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.56229 > localhost.domain: 20028+ [1au] A? launchpad.net. (42)
+22:35:05.962277 IP (tos 0x0, ttl 64, id 46296, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.56229 > localhost.domain: 57147+ [1au] AAAA? launchpad.net. (42)
+22:35:05.962426 IP (tos 0x0, ttl 64, id 59303, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.56229: 20028 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:05.962477 IP (tos 0x0, ttl 64, id 59304, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.56229: 57147 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:35:06.155844 IP (tos 0x0, ttl 64, id 46312, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.52816 > localhost.domain: 12821+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:35:06.155845 IP (tos 0x0, ttl 64, id 46310, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.58906 > localhost.domain: 789+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:35:06.155845 IP (tos 0x0, ttl 64, id 46311, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.46532 > localhost.domain: 65066+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:35:06.163455 IP (tos 0x0, ttl 64, id 59312, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.52816: 12821 NXDomain 0/0/1 (59)
+22:35:06.163544 IP (tos 0x0, ttl 64, id 59313, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.58906: 789 NXDomain 0/0/1 (57)
+22:35:06.163656 IP (tos 0x0, ttl 64, id 59314, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.46532: 65066 NXDomain 0/0/1 (61)
+22:35:06.164048 IP (tos 0x0, ttl 64, id 46314, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.52680 > localhost.domain: 23901+ [1au] A? ppa.launchpad.net. (46)
+22:35:06.164048 IP (tos 0x0, ttl 64, id 46313, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.47108 > localhost.domain: 59472+ [1au] A? security.ubuntu.com. (48)
+22:35:06.164054 IP (tos 0x0, ttl 64, id 46315, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.47108 > localhost.domain: 10332+ [1au] AAAA? security.ubuntu.com. (48)
+22:35:06.164196 IP (tos 0x0, ttl 64, id 59315, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.52680: 23901 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:35:06.164236 IP (tos 0x0, ttl 64, id 59316, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.47108: 59472 2/0/1 security.ubuntu.com. A 91.189.91.39, security.ubuntu.com. A 91.189.91.38 (80)
+22:35:06.164273 IP (tos 0x0, ttl 64, id 59317, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.47108: 10332 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::18, security.ubuntu.com. AAAA 2001:67c:1562::15 (104)
+22:35:06.164339 IP (tos 0x0, ttl 64, id 46316, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.52680 > localhost.domain: 55388+ [1au] AAAA? ppa.launchpad.net. (46)
+22:35:06.164401 IP (tos 0x0, ttl 64, id 59318, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.52680: 55388 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:35:06.164653 IP (tos 0x0, ttl 64, id 46317, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.56520 > localhost.domain: 57879+ [1au] A? se.archive.ubuntu.com. (50)
+22:35:06.164809 IP (tos 0x0, ttl 64, id 46318, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.56520 > localhost.domain: 48914+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:35:06.164884 IP (tos 0x0, ttl 64, id 59319, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.56520: 57879 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:35:06.164976 IP (tos 0x0, ttl 64, id 59320, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.56520: 48914 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::173, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::165 (162)
+22:35:37.544909 IP (tos 0x0, ttl 64, id 53672, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.58882 > localhost.domain: 32233+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:35:37.544909 IP (tos 0x0, ttl 64, id 53673, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.46010 > localhost.domain: 7139+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:35:37.544909 IP (tos 0x0, ttl 64, id 53674, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.43220 > localhost.domain: 36958+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:35:37.551934 IP (tos 0x0, ttl 64, id 204, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.58882: 32233 NXDomain 0/0/1 (57)
+22:35:37.552369 IP (tos 0x0, ttl 64, id 53676, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.54757 > localhost.domain: 8021+ [1au] A? ppa.launchpad.net. (46)
+22:35:37.552377 IP (tos 0x0, ttl 64, id 53677, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.54757 > localhost.domain: 58450+ [1au] AAAA? ppa.launchpad.net. (46)
+22:35:37.552448 IP (tos 0x0, ttl 64, id 205, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.54757: 8021 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:35:37.552491 IP (tos 0x0, ttl 64, id 206, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.54757: 58450 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:35:37.552698 IP (tos 0x0, ttl 64, id 207, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.43220: 36958 NXDomain 0/0/1 (59)
+22:35:37.553393 IP (tos 0x0, ttl 64, id 53678, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.52773 > localhost.domain: 56653+ [1au] A? security.ubuntu.com. (48)
+22:35:37.553394 IP (tos 0x0, ttl 64, id 208, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.46010: 7139 NXDomain 0/0/1 (61)
+22:35:37.553406 IP (tos 0x0, ttl 64, id 53679, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.52773 > localhost.domain: 45897+ [1au] AAAA? security.ubuntu.com. (48)
+22:35:37.553772 IP (tos 0x0, ttl 64, id 53680, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.46385 > localhost.domain: 9815+ [1au] A? se.archive.ubuntu.com. (50)
+22:35:37.553787 IP (tos 0x0, ttl 64, id 53681, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.46385 > localhost.domain: 44880+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:35:37.553890 IP (tos 0x0, ttl 64, id 209, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.46385: 9815 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:35:37.553966 IP (tos 0x0, ttl 64, id 210, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.46385: 44880 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::173, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::165 (162)
+22:35:37.557896 IP (tos 0x0, ttl 64, id 211, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.52773: 56653 2/0/1 security.ubuntu.com. A 91.189.91.39, security.ubuntu.com. A 91.189.91.38 (80)
+22:35:37.557938 IP (tos 0x0, ttl 64, id 212, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.52773: 45897 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::15, security.ubuntu.com. AAAA 2001:67c:1562::18 (104)
+22:35:42.508497 IP (tos 0x0, ttl 64, id 54510, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.52306 > localhost.domain: 36870+ [1au] A? launchpad.net. (42)
+22:35:42.508521 IP (tos 0x0, ttl 64, id 54511, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.52306 > localhost.domain: 3867+ [1au] AAAA? launchpad.net. (42)
+22:35:42.508787 IP (tos 0x0, ttl 64, id 1369, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.52306: 36870 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:42.508874 IP (tos 0x0, ttl 64, id 1370, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.52306: 3867 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:35:42.731166 IP (tos 0x0, ttl 64, id 54555, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.50822 > localhost.domain: 37341+ [1au] A? launchpad.net. (42)
+22:35:42.731195 IP (tos 0x0, ttl 64, id 54556, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.50822 > localhost.domain: 15317+ [1au] AAAA? launchpad.net. (42)
+22:35:42.731399 IP (tos 0x0, ttl 64, id 1422, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.50822: 37341 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:42.731456 IP (tos 0x0, ttl 64, id 1423, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.50822: 15317 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:35:42.897119 IP (tos 0x0, ttl 64, id 54576, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.57214 > localhost.domain: 56235+ [1au] A? launchpad.net. (42)
+22:35:42.897140 IP (tos 0x0, ttl 64, id 54577, offset 0, flags [DF], proto UDP (17), length 70)
+    localhost.57214 > localhost.domain: 31663+ [1au] AAAA? launchpad.net. (42)
+22:35:42.897288 IP (tos 0x0, ttl 64, id 1439, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.57214: 56235 2/0/1 launchpad.net. A 91.189.89.223, launchpad.net. A 91.189.89.222 (74)
+22:35:42.897347 IP (tos 0x0, ttl 64, id 1440, offset 0, flags [DF], proto UDP (17), length 126)
+    localhost.domain > localhost.57214: 31663 2/0/1 launchpad.net. AAAA 2001:67c:1560:8003::8004, launchpad.net. AAAA 2001:67c:1560:8003::8003 (98)
+22:35:43.125004 IP (tos 0x0, ttl 64, id 54597, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.40058 > localhost.domain: 59642+ [1au] SRV? _http._tcp.se.archive.ubuntu.com. (61)
+22:35:43.125004 IP (tos 0x0, ttl 64, id 54578, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.53798 > localhost.domain: 21668+ [1au] SRV? _http._tcp.ppa.launchpad.net. (57)
+22:35:43.125221 IP (tos 0x0, ttl 64, id 54598, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.40853 > localhost.domain: 34910+ [1au] SRV? _http._tcp.security.ubuntu.com. (59)
+22:35:43.143412 IP (tos 0x0, ttl 64, id 1489, offset 0, flags [DF], proto UDP (17), length 85)
+    localhost.domain > localhost.53798: 21668 NXDomain 0/0/1 (57)
+22:35:43.143641 IP (tos 0x0, ttl 64, id 1490, offset 0, flags [DF], proto UDP (17), length 89)
+    localhost.domain > localhost.40058: 59642 NXDomain 0/0/1 (61)
+22:35:43.144051 IP (tos 0x0, ttl 64, id 1491, offset 0, flags [DF], proto UDP (17), length 87)
+    localhost.domain > localhost.40853: 34910 NXDomain 0/0/1 (59)
+22:35:43.144210 IP (tos 0x0, ttl 64, id 54601, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.47907 > localhost.domain: 24389+ [1au] A? se.archive.ubuntu.com. (50)
+22:35:43.144255 IP (tos 0x0, ttl 64, id 54602, offset 0, flags [DF], proto UDP (17), length 78)
+    localhost.47907 > localhost.domain: 50497+ [1au] AAAA? se.archive.ubuntu.com. (50)
+22:35:43.144345 IP (tos 0x0, ttl 64, id 1492, offset 0, flags [DF], proto UDP (17), length 154)
+    localhost.domain > localhost.47907: 24389 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. A 194.71.11.173, ftp.acc.umu.se. A 194.71.11.165, ftp.acc.umu.se. A 194.71.11.163 (126)
+22:35:43.144423 IP (tos 0x0, ttl 64, id 1493, offset 0, flags [DF], proto UDP (17), length 190)
+    localhost.domain > localhost.47907: 50497 4/0/1 se.archive.ubuntu.com. CNAME ftp.acc.umu.se., ftp.acc.umu.se. AAAA 2001:6b0:19::173, ftp.acc.umu.se. AAAA 2001:6b0:19::163, ftp.acc.umu.se. AAAA 2001:6b0:19::165 (162)
+22:35:43.144609 IP (tos 0x0, ttl 64, id 54603, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.48423 > localhost.domain: 19821+ [1au] A? security.ubuntu.com. (48)
+22:35:43.144617 IP (tos 0x0, ttl 64, id 54604, offset 0, flags [DF], proto UDP (17), length 76)
+    localhost.48423 > localhost.domain: 39779+ [1au] AAAA? security.ubuntu.com. (48)
+22:35:43.144844 IP (tos 0x0, ttl 64, id 54605, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.48753 > localhost.domain: 24502+ [1au] A? ppa.launchpad.net. (46)
+22:35:43.144849 IP (tos 0x0, ttl 64, id 54606, offset 0, flags [DF], proto UDP (17), length 74)
+    localhost.48753 > localhost.domain: 52144+ [1au] AAAA? ppa.launchpad.net. (46)
+22:35:43.144894 IP (tos 0x0, ttl 64, id 1494, offset 0, flags [DF], proto UDP (17), length 108)
+    localhost.domain > localhost.48423: 19821 2/0/1 security.ubuntu.com. A 91.189.91.38, security.ubuntu.com. A 91.189.91.39 (80)
+22:35:43.144944 IP (tos 0x0, ttl 64, id 1495, offset 0, flags [DF], proto UDP (17), length 132)
+    localhost.domain > localhost.48423: 39779 2/0/1 security.ubuntu.com. AAAA 2001:67c:1562::18, security.ubuntu.com. AAAA 2001:67c:1562::15 (104)
+22:35:43.144989 IP (tos 0x0, ttl 64, id 1496, offset 0, flags [DF], proto UDP (17), length 90)
+    localhost.domain > localhost.48753: 24502 1/0/1 ppa.launchpad.net. A 91.189.95.85 (62)
+22:35:43.145030 IP (tos 0x0, ttl 64, id 1497, offset 0, flags [DF], proto UDP (17), length 102)
+    localhost.domain > localhost.48753: 52144 1/0/1 ppa.launchpad.net. AAAA 2001:67c:1560:8008::19 (74)
+22:36:25.128132 IP (tos 0x0, ttl 64, id 4244, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.34102 > localhost.http: Flags [S], cksum 0xfe30 (incorrect -> 0xa9eb), seq 3859353448, win 65495, options [mss 65495,sackOK,TS val 383783998 ecr 0,nop,wscale 7], length 0
+22:36:25.128152 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.http > localhost.34102: Flags [S.], cksum 0xfe30 (incorrect -> 0xfb7e), seq 1609114464, ack 3859353449, win 65483, options [mss 65495,sackOK,TS val 383783998 ecr 383783998,nop,wscale 7], length 0
+22:36:25.128165 IP (tos 0x0, ttl 64, id 4245, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34102 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x223b), ack 1, win 512, options [nop,nop,TS val 383783998 ecr 383783998], length 0
+22:36:25.128200 IP (tos 0x0, ttl 64, id 4246, offset 0, flags [DF], proto TCP (6), length 243)
+    localhost.34102 > localhost.http: Flags [P.], cksum 0xfee7 (incorrect -> 0x2498), seq 1:192, ack 1, win 512, options [nop,nop,TS val 383783998 ecr 383783998], length 191: HTTP, length: 191
+	POST /action_page.php HTTP/1.1
+	Host: localhost
+	User-Agent: curl/7.68.0
+	Accept: */*
+	Content-Length: 33
+	Content-Type: application/x-www-form-urlencoded
+	
+	anvandarnamn=admin&losenord=admin[!http]
+22:36:25.128224 IP (tos 0x0, ttl 64, id 48927, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34102: Flags [.], cksum 0xfe28 (incorrect -> 0x217d), ack 192, win 511, options [nop,nop,TS val 383783998 ecr 383783998], length 0
+22:36:25.129939 IP (tos 0x0, ttl 64, id 48928, offset 0, flags [DF], proto TCP (6), length 237)
+    localhost.http > localhost.34102: Flags [P.], cksum 0xfee1 (incorrect -> 0x023c), seq 1:186, ack 192, win 512, options [nop,nop,TS val 383784000 ecr 383783998], length 185: HTTP, length: 185
+	HTTP/1.0 500 Internal Server Error
+	Date: Fri, 27 Aug 2021 20:36:25 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Content-Length: 0
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+22:36:25.129959 IP (tos 0x0, ttl 64, id 4247, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34102 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x20c0), ack 186, win 511, options [nop,nop,TS val 383784000 ecr 383784000], length 0
+22:36:25.130017 IP (tos 0x0, ttl 64, id 48929, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34102: Flags [F.], cksum 0xfe28 (incorrect -> 0x20be), seq 186, ack 192, win 512, options [nop,nop,TS val 383784000 ecr 383784000], length 0
+22:36:25.130159 IP (tos 0x0, ttl 64, id 4248, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34102 > localhost.http: Flags [F.], cksum 0xfe28 (incorrect -> 0x20bd), seq 192, ack 187, win 512, options [nop,nop,TS val 383784000 ecr 383784000], length 0
+22:36:25.130173 IP (tos 0x0, ttl 64, id 48930, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34102: Flags [.], cksum 0xfe28 (incorrect -> 0x20bd), ack 193, win 512, options [nop,nop,TS val 383784000 ecr 383784000], length 0
+22:36:30.141861 IP (tos 0x0, ttl 64, id 53089, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.34104 > localhost.http: Flags [S], cksum 0xfe30 (incorrect -> 0x3f51), seq 189219117, win 65495, options [mss 65495,sackOK,TS val 383789012 ecr 0,nop,wscale 7], length 0
+22:36:30.141878 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.http > localhost.34104: Flags [S.], cksum 0xfe30 (incorrect -> 0x638b), seq 2808018349, ack 189219118, win 65483, options [mss 65495,sackOK,TS val 383789012 ecr 383789012,nop,wscale 7], length 0
+22:36:30.141891 IP (tos 0x0, ttl 64, id 53090, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34104 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x8a47), ack 1, win 512, options [nop,nop,TS val 383789012 ecr 383789012], length 0
+22:36:30.141920 IP (tos 0x0, ttl 64, id 53091, offset 0, flags [DF], proto TCP (6), length 243)
+    localhost.34104 > localhost.http: Flags [P.], cksum 0xfee7 (incorrect -> 0x8ca4), seq 1:192, ack 1, win 512, options [nop,nop,TS val 383789012 ecr 383789012], length 191: HTTP, length: 191
+	POST /action_page.php HTTP/1.1
+	Host: localhost
+	User-Agent: curl/7.68.0
+	Accept: */*
+	Content-Length: 33
+	Content-Type: application/x-www-form-urlencoded
+	
+	anvandarnamn=admin&losenord=admin[!http]
+22:36:30.141943 IP (tos 0x0, ttl 64, id 49344, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34104: Flags [.], cksum 0xfe28 (incorrect -> 0x8989), ack 192, win 511, options [nop,nop,TS val 383789012 ecr 383789012], length 0
+22:36:30.142647 IP (tos 0x0, ttl 64, id 49345, offset 0, flags [DF], proto TCP (6), length 237)
+    localhost.http > localhost.34104: Flags [P.], cksum 0xfee1 (incorrect -> 0x6f48), seq 1:186, ack 192, win 512, options [nop,nop,TS val 383789013 ecr 383789012], length 185: HTTP, length: 185
+	HTTP/1.0 500 Internal Server Error
+	Date: Fri, 27 Aug 2021 20:36:30 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Content-Length: 0
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+22:36:30.142675 IP (tos 0x0, ttl 64, id 49346, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34104: Flags [F.], cksum 0xfe28 (incorrect -> 0x88cd), seq 186, ack 192, win 512, options [nop,nop,TS val 383789013 ecr 383789012], length 0
+22:36:30.142687 IP (tos 0x0, ttl 64, id 53092, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34104 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x88ce), ack 186, win 511, options [nop,nop,TS val 383789013 ecr 383789013], length 0
+22:36:30.142736 IP (tos 0x0, ttl 64, id 53093, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34104 > localhost.http: Flags [F.], cksum 0xfe28 (incorrect -> 0x88cb), seq 192, ack 187, win 512, options [nop,nop,TS val 383789013 ecr 383789013], length 0
+22:36:30.142744 IP (tos 0x0, ttl 64, id 49347, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34104: Flags [.], cksum 0xfe28 (incorrect -> 0x88cb), ack 193, win 512, options [nop,nop,TS val 383789013 ecr 383789013], length 0
+22:36:35.151988 IP (tos 0x0, ttl 64, id 41697, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.34106 > localhost.http: Flags [S], cksum 0xfe30 (incorrect -> 0x92ce), seq 2928293592, win 65495, options [mss 65495,sackOK,TS val 383794022 ecr 0,nop,wscale 7], length 0
+22:36:35.152007 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.http > localhost.34106: Flags [S.], cksum 0xfe30 (incorrect -> 0xa535), seq 3777083947, ack 2928293593, win 65483, options [mss 65495,sackOK,TS val 383794022 ecr 383794022,nop,wscale 7], length 0
+22:36:35.152020 IP (tos 0x0, ttl 64, id 41698, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34106 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0xcbf1), ack 1, win 512, options [nop,nop,TS val 383794022 ecr 383794022], length 0
+22:36:35.152046 IP (tos 0x0, ttl 64, id 41699, offset 0, flags [DF], proto TCP (6), length 243)
+    localhost.34106 > localhost.http: Flags [P.], cksum 0xfee7 (incorrect -> 0xce4e), seq 1:192, ack 1, win 512, options [nop,nop,TS val 383794022 ecr 383794022], length 191: HTTP, length: 191
+	POST /action_page.php HTTP/1.1
+	Host: localhost
+	User-Agent: curl/7.68.0
+	Accept: */*
+	Content-Length: 33
+	Content-Type: application/x-www-form-urlencoded
+	
+	anvandarnamn=admin&losenord=admin[!http]
+22:36:35.152069 IP (tos 0x0, ttl 64, id 61520, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34106: Flags [.], cksum 0xfe28 (incorrect -> 0xcb33), ack 192, win 511, options [nop,nop,TS val 383794022 ecr 383794022], length 0
+22:36:35.152999 IP (tos 0x0, ttl 64, id 61521, offset 0, flags [DF], proto TCP (6), length 237)
+    localhost.http > localhost.34106: Flags [P.], cksum 0xfee1 (incorrect -> 0xabf2), seq 1:186, ack 192, win 512, options [nop,nop,TS val 383794023 ecr 383794022], length 185: HTTP, length: 185
+	HTTP/1.0 500 Internal Server Error
+	Date: Fri, 27 Aug 2021 20:36:35 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Content-Length: 0
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+22:36:35.153011 IP (tos 0x0, ttl 64, id 41700, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34106 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0xca78), ack 186, win 511, options [nop,nop,TS val 383794023 ecr 383794023], length 0
+22:36:35.153044 IP (tos 0x0, ttl 64, id 61522, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34106: Flags [F.], cksum 0xfe28 (incorrect -> 0xca76), seq 186, ack 192, win 512, options [nop,nop,TS val 383794023 ecr 383794023], length 0
+22:36:35.153078 IP (tos 0x0, ttl 64, id 41701, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34106 > localhost.http: Flags [F.], cksum 0xfe28 (incorrect -> 0xca75), seq 192, ack 187, win 512, options [nop,nop,TS val 383794023 ecr 383794023], length 0
+22:36:35.153091 IP (tos 0x0, ttl 64, id 61523, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34106: Flags [.], cksum 0xfe28 (incorrect -> 0xca75), ack 193, win 512, options [nop,nop,TS val 383794023 ecr 383794023], length 0
+22:36:40.162786 IP (tos 0x0, ttl 64, id 7586, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.34108 > localhost.http: Flags [S], cksum 0xfe30 (incorrect -> 0x15b4), seq 2837161420, win 65495, options [mss 65495,sackOK,TS val 383799033 ecr 0,nop,wscale 7], length 0
+22:36:40.162802 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    localhost.http > localhost.34108: Flags [S.], cksum 0xfe30 (incorrect -> 0x5e39), seq 1186532067, ack 2837161421, win 65483, options [mss 65495,sackOK,TS val 383799033 ecr 383799033,nop,wscale 7], length 0
+22:36:40.162816 IP (tos 0x0, ttl 64, id 7587, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34108 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x84f5), ack 1, win 512, options [nop,nop,TS val 383799033 ecr 383799033], length 0
+22:36:40.162845 IP (tos 0x0, ttl 64, id 7588, offset 0, flags [DF], proto TCP (6), length 243)
+    localhost.34108 > localhost.http: Flags [P.], cksum 0xfee7 (incorrect -> 0x8752), seq 1:192, ack 1, win 512, options [nop,nop,TS val 383799033 ecr 383799033], length 191: HTTP, length: 191
+	POST /action_page.php HTTP/1.1
+	Host: localhost
+	User-Agent: curl/7.68.0
+	Accept: */*
+	Content-Length: 33
+	Content-Type: application/x-www-form-urlencoded
+	
+	anvandarnamn=admin&losenord=admin[!http]
+22:36:40.162868 IP (tos 0x0, ttl 64, id 43042, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34108: Flags [.], cksum 0xfe28 (incorrect -> 0x8437), ack 192, win 511, options [nop,nop,TS val 383799033 ecr 383799033], length 0
+22:36:40.163769 IP (tos 0x0, ttl 64, id 43043, offset 0, flags [DF], proto TCP (6), length 237)
+    localhost.http > localhost.34108: Flags [P.], cksum 0xfee1 (incorrect -> 0x69f5), seq 1:186, ack 192, win 512, options [nop,nop,TS val 383799034 ecr 383799033], length 185: HTTP, length: 185
+	HTTP/1.0 500 Internal Server Error
+	Date: Fri, 27 Aug 2021 20:36:40 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Content-Length: 0
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+22:36:40.163783 IP (tos 0x0, ttl 64, id 7589, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34108 > localhost.http: Flags [.], cksum 0xfe28 (incorrect -> 0x837c), ack 186, win 511, options [nop,nop,TS val 383799034 ecr 383799034], length 0
+22:36:40.163823 IP (tos 0x0, ttl 64, id 43044, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34108: Flags [F.], cksum 0xfe28 (incorrect -> 0x837a), seq 186, ack 192, win 512, options [nop,nop,TS val 383799034 ecr 383799034], length 0
+22:36:40.163933 IP (tos 0x0, ttl 64, id 7590, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.34108 > localhost.http: Flags [F.], cksum 0xfe28 (incorrect -> 0x8379), seq 192, ack 187, win 512, options [nop,nop,TS val 383799034 ecr 383799034], length 0
+22:36:40.163949 IP (tos 0x0, ttl 64, id 43045, offset 0, flags [DF], proto TCP (6), length 52)
+    localhost.http > localhost.34108: Flags [.], cksum 0xfe28 (incorrect -> 0x8379), ack 193, win 512, options [nop,nop,TS val 383799034 ecr 383799034], length 0
+22:36:51.083340 IP (tos 0x0, ttl 64, id 58882, offset 0, flags [DF], proto UDP (17), length 86)
+    localhost.41065 > localhost.domain: 31909+ [1au] AAAA? connectivity-check.ubuntu.com. (58)
+22:36:51.086301 IP (tos 0x0, ttl 64, id 15980, offset 0, flags [DF], proto UDP (17), length 86)
+    localhost.domain > localhost.41065: 31909 0/0/1 (58)
+^Fpost      ^C
+190 packets captured
+380 packets received by filter
+0 packets dropped by kernel
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-08-27 22:37:39+02:00 [COMMAND_EXIT_CODE="0"]
