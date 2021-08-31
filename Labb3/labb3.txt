@@ -1,0 +1,217 @@
+Script started on 2021-08-31 15:40:41+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ exitopenssl genrsa /out key.pem 2048[1P[1@-
+Generating RSA private key, 2048 bit long modulus (2 primes)
+....................................................................................................................+++++
+...............................+++++
+e is 65537 (0x010001)
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ openssl req -new-[K -key key.pem -out request.pem [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Km
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:SE
+State or Province Name (full name) [Some-State]:Stockholm
+Locality Name (eg, city) []:Nacka
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Nackademin
+Organizational Unit Name (eg, section) []:IoT20
+Common Name (e.g. server FQDN or YOUR name) []:Vincent
+Email Address []:vincent.palma@yh.nackademin.se
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ opsenssl rr[Kew[Kq -noout -text -iin [K[K[Kn -request.pem
+
+Command 'opsenssl' not found, did you mean:
+
+  command 'openssl' from deb openssl (1.1.1f-1ubuntu2.8)
+
+Try: sudo apt install <deb name>
+
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ opsenssl req -noout -text -in -request.pem[1P
+Can't open -request.pem for reading, No such file or directory
+139924928116032:error:02001002:system library:fopen:No such file or directory:../crypto/bio/bss_file.c:69:fopen('-request.pem','r')
+139924928116032:error:2006D080:BIO routines:BIO_new_file:no such file:../crypto/bio/bss_file.c:76:
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ openssl req -noout -text -in -request.pem[1Prequest.pem
+Certificate Request:
+    Data:
+        Version: 1 (0x0)
+        Subject: C = SE, ST = Stockholm, L = Nacka, O = Nackademin, OU = IoT20, CN = Vincent, emailAddress = vincent.palma@yh.nackademin.se
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:cc:1c:79:d9:8a:4b:ac:a8:e4:97:54:b3:fe:f0:
+                    26:86:e2:5c:a0:ac:8e:16:6d:63:c7:3b:25:69:7b:
+                    96:d6:e4:de:05:be:95:94:5b:66:5b:65:e7:e5:e8:
+                    f6:3f:ed:25:15:ec:9c:58:44:96:39:64:8b:82:42:
+                    08:8b:98:37:57:10:13:3a:27:03:ad:42:fb:64:f2:
+                    5b:58:e4:5d:17:3c:22:f1:79:67:a8:b9:11:13:ea:
+                    48:ee:3d:d8:41:57:2e:c8:f6:48:4c:2b:71:df:7c:
+                    6b:58:ef:df:d5:2c:b5:22:d1:fd:b0:bc:c9:df:55:
+                    ee:71:fe:19:a0:66:29:08:96:33:bc:a3:4b:43:48:
+                    07:c1:4e:fd:cf:32:8d:e5:2e:25:31:d1:cd:0e:28:
+                    69:4b:17:11:02:e4:8a:9f:49:12:ca:28:43:c9:72:
+                    12:60:87:b6:fe:b2:21:67:13:d6:11:b9:32:b9:2c:
+                    ed:27:a7:a4:7b:fc:26:e1:83:8e:cd:40:ab:4a:da:
+                    47:6d:93:cd:7b:ca:08:4a:2a:39:20:6c:5c:ba:dc:
+                    89:0c:49:ca:d0:46:7b:6d:eb:2b:fd:7f:16:6c:6e:
+                    e2:c6:9c:8a:00:0d:1b:fc:d3:8b:ec:bb:ef:57:0b:
+                    8f:dc:a1:73:e1:e4:d4:73:08:89:61:95:8e:39:0c:
+                    d8:95
+                Exponent: 65537 (0x10001)
+        Attributes:
+            a0:00
+    Signature Algorithm: sha256WithRSAEncryption
+         73:b0:cc:4f:dc:b7:b8:f7:f2:10:ac:f8:61:7e:c1:e7:91:eb:
+         e8:f1:bd:ad:c8:ab:e6:fa:1d:ea:fd:b9:b0:76:ab:2f:68:45:
+         cf:ee:12:61:f6:d0:a8:46:d7:67:c3:3a:99:62:8b:f5:4b:a0:
+         9d:d7:15:a9:70:a3:01:5b:58:e3:77:ff:10:09:29:de:0e:46:
+         e7:c5:6a:93:18:6e:25:ef:50:c8:59:72:9f:4b:07:9f:2f:1f:
+         20:11:d1:96:47:01:0d:e6:d7:e2:7b:63:87:15:ab:eb:de:4b:
+         ab:0f:22:88:3b:71:de:e8:72:71:1c:db:03:76:0a:c0:f8:97:
+         70:06:99:32:5a:2a:7d:b8:0b:5f:e6:53:93:a4:b8:83:f5:22:
+         f7:ce:0a:da:fc:33:fb:d8:a1:ec:dc:ec:ce:0b:bd:b8:9d:2f:
+         1b:9e:2c:2c:5e:f1:b6:8d:89:ad:fc:91:e1:94:af:e3:01:fd:
+         af:27:db:ad:1b:98:ea:42:4f:01:74:22:a8:28:f3:2a:60:97:
+         08:3c:d8:a7:d9:b7:c8:dd:08:e5:74:ab:62:e3:30:48:95:cd:
+         ea:15:94:7b:af:16:5b:7b:fd:d2:ba:b4:5c:69:5f:1f:d9:38:
+         ad:0e:47:2e:03:98:92:1b:0f:89:f8:9b:4a:21:a3:1d:58:19:
+         83:29:00:20
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ openssl ca -config ca.conf -out cert.pem -infi les rew[Kquest.pe [Km
+Using configuration from ca.conf
+Can't open ca.conf for reading, No such file or directory
+139953422079296:error:02001002:system library:fopen:No such file or directory:../crypto/bio/bss_file.c:69:fopen('ca.conf','r')
+139953422079296:error:2006D080:BIO routines:BIO_new_file:no such file:../crypto/bio/bss_file.c:76:
+]0;user@user-VirtualBox: ~/Documents[01;32muser@user-VirtualBox[00m:[01;34m~/Documents[00m$ openssl ca -config ca.conf -out cert.pem -infiles request.pem[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd Labb3
+]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ cd Labb3openssl ca -config ca.conf -out cert.pem -infiles request.pem
+Using configuration from ca.conf
+Enter pass phrase for ./ca/private/cakey.pem:
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 4389 (0x1125)
+        Validity
+            Not Before: Aug 31 13:47:39 2021 GMT
+            Not After : Aug 31 13:47:39 2022 GMT
+        Subject:
+            countryName               = SE
+            stateOrProvinceName       = Stockholm
+            organizationName          = Nackademin
+            organizationalUnitName    = IoT20
+            commonName                = Vincent
+            emailAddress              = vincent.palma@yh.nackademin.se
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                88:95:F2:42:BB:65:83:F7:6F:82:A8:F8:9F:24:FB:6B:2B:B8:B3:63
+            X509v3 Authority Key Identifier: 
+                keyid:86:EE:E1:4C:81:1C:B4:FD:59:94:CB:4D:5A:DD:E4:A1:FA:A5:78:31
+
+Certificate is to be certified until Aug 31 13:47:39 2022 GMT (365 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ openssl x509 -noout -text -in cert.pm[Kem
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4389 (0x1125)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd, CN = 16.170.168.77, emailAddress = douglas.eriksson@prevas.se
+        Validity
+            Not Before: Aug 31 13:47:39 2021 GMT
+            Not After : Aug 31 13:47:39 2022 GMT
+        Subject: C = SE, ST = Stockholm, O = Nackademin, OU = IoT20, CN = Vincent, emailAddress = vincent.palma@yh.nackademin.se
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:cc:1c:79:d9:8a:4b:ac:a8:e4:97:54:b3:fe:f0:
+                    26:86:e2:5c:a0:ac:8e:16:6d:63:c7:3b:25:69:7b:
+                    96:d6:e4:de:05:be:95:94:5b:66:5b:65:e7:e5:e8:
+                    f6:3f:ed:25:15:ec:9c:58:44:96:39:64:8b:82:42:
+                    08:8b:98:37:57:10:13:3a:27:03:ad:42:fb:64:f2:
+                    5b:58:e4:5d:17:3c:22:f1:79:67:a8:b9:11:13:ea:
+                    48:ee:3d:d8:41:57:2e:c8:f6:48:4c:2b:71:df:7c:
+                    6b:58:ef:df:d5:2c:b5:22:d1:fd:b0:bc:c9:df:55:
+                    ee:71:fe:19:a0:66:29:08:96:33:bc:a3:4b:43:48:
+                    07:c1:4e:fd:cf:32:8d:e5:2e:25:31:d1:cd:0e:28:
+                    69:4b:17:11:02:e4:8a:9f:49:12:ca:28:43:c9:72:
+                    12:60:87:b6:fe:b2:21:67:13:d6:11:b9:32:b9:2c:
+                    ed:27:a7:a4:7b:fc:26:e1:83:8e:cd:40:ab:4a:da:
+                    47:6d:93:cd:7b:ca:08:4a:2a:39:20:6c:5c:ba:dc:
+                    89:0c:49:ca:d0:46:7b:6d:eb:2b:fd:7f:16:6c:6e:
+                    e2:c6:9c:8a:00:0d:1b:fc:d3:8b:ec:bb:ef:57:0b:
+                    8f:dc:a1:73:e1:e4:d4:73:08:89:61:95:8e:39:0c:
+                    d8:95
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                88:95:F2:42:BB:65:83:F7:6F:82:A8:F8:9F:24:FB:6B:2B:B8:B3:63
+            X509v3 Authority Key Identifier: 
+                keyid:86:EE:E1:4C:81:1C:B4:FD:59:94:CB:4D:5A:DD:E4:A1:FA:A5:78:31
+
+    Signature Algorithm: sha256WithRSAEncryption
+         10:67:dd:89:69:98:02:5e:8e:4d:ed:70:77:63:93:e4:9a:33:
+         7c:06:37:f1:11:06:a3:4d:bb:2d:e4:00:85:37:12:bf:f3:c6:
+         c1:d9:75:57:72:87:be:db:a5:ac:43:6d:a8:8a:d2:58:2a:f8:
+         54:5d:ec:1c:9d:fc:81:e1:7f:5b:dc:45:46:8b:3a:73:cf:57:
+         6a:0a:ee:36:d3:8a:40:a3:62:99:bd:0e:bc:b9:e3:06:47:e7:
+         58:42:1f:98:3e:bd:a0:e5:2a:f5:bb:31:f6:04:cd:7e:5b:b2:
+         ea:0a:f4:ed:58:b5:e5:c0:ea:14:04:86:57:a0:5c:15:90:94:
+         57:60:20:04:a3:91:88:13:ba:20:34:05:8b:a2:ad:15:08:b5:
+         47:3b:31:f0:d0:20:10:3e:94:2a:ed:bf:26:5c:51:08:84:86:
+         b2:cf:13:82:13:d6:32:bb:5a:60:4c:9d:fe:38:d1:55:21:ab:
+         e7:ba:5d:3c:c4:60:a4:9f:d8:99:42:f9:5c:dd:d6:f6:a0:01:
+         8b:68:8b:22:e1:67:84:6a:0d:f5:49:dc:6c:f0:f0:3f:13:90:
+         0f:d2:a1:26:a0:4b:f0:02:74:41:60:be:b9:bf:19:a2:29:c8:
+         72:de:17:73:44:f9:49:be:27:01:4b:55:c5:35:d2:59:b5:17:
+         ad:4e:10:2a:aa:e7:6b:07:d2:d8:1f:30:d9:e6:a3:b6:b8:e3:
+         ad:3e:06:2f:b9:6e:a4:e8:60:ff:b4:da:56:97:91:19:17:2a:
+         c3:4f:c3:02:0e:3e:57:35:48:93:b7:d4:21:37:64:f1:0b:57:
+         ad:41:89:b3:5a:c8:2e:62:16:96:c7:85:46:13:a7:dd:54:a0:
+         c1:6f:c5:be:fd:40:19:4e:52:a4:5f:e4:0b:0e:f3:2e:c8:b0:
+         8c:1b:60:fd:57:e5:cd:97:d4:3c:18:1a:0d:ca:26:d7:45:92:
+         44:28:d4:3e:24:db:a9:98:df:b5:fb:40:37:fa:46:9c:ce:0d:
+         ae:7f:be:83:93:89:af:fa:2f:16:9a:a2:29:aa:8f:fb:8c:55:
+         30:30:ff:4a:97:33:a2:8c:e3:83:0b:dc:60:83:4c:2a:70:3f:
+         af:ec:f0:21:df:d3:ca:47:fd:8f:91:f2:2b:75:1a:5d:6a:1a:
+         58:16:c4:11:71:1e:cc:74:9b:28:e7:47:2c:03:79:5a:26:a3:
+         aa:8d:87:d1:ce:01:8c:5f:72:1c:7a:7a:df:4d:47:7a:39:f3:
+         2a:ec:c8:e8:5c:ec:91:a3:7d:01:0e:58:a0:cf:70:6e:71:64:
+         6b:43:c0:56:ba:ee:b5:42:9c:9d:10:75:99:61:c2:88:39:83:
+         f4:28:e8:38:59:56:4f:0a
+]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ open sl[Ksl pkcs12 -export -out bundle.pfx  -inkey key.pem -in cert.pem - c[K[Kcertfile ca/certs/webserver.crt
+
+Command 'open' not found, did you mean:
+
+  command 'gopen' from deb gnustep-gui-runtime (0.27.0-5build2)
+  command 'pen' from deb pen (0.34.1-1build1)
+  command 'wopen' from deb gworkspace.app (0.9.4-2)
+
+Try: sudo apt install <deb name>
+
+]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ open ssl pkcs12 -export -out bundle.pfx -inkey key.pem -in cert.pem -certfile ca/certs/webserver.crt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cssl pkcs12 -export -out bundle.pfx -i[1P[A]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ [C[C[C[C
+
+Enter Export Password:
+Verifying - Enter Export Password:
+]0;user@user-VirtualBox: ~/Documents/Labb3[01;32muser@user-VirtualBox[00m:[01;34m~/Documents/Labb3[00m$ exit
+exit
+
+Script done on 2021-08-31 15:56:27+02:00 [COMMAND_EXIT_CODE="0"]
