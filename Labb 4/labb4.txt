@@ -1,0 +1,120 @@
+Script started on 2021-09-06 22:28:21+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ curl ipinfo.io/ip
+92.244.20.61]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ pwd
+/home/user
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo cp ca-cert.pem /etc/ipsec.d/cacerts/
+[sudo] password for user: 
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo gedit /t[Ketx/[K[Kc/ipsec.p[Ksecrets
+
+(gedit:12462): Tepl-[1;33mWARNING[0m **: [34m22:32:06.571[0m: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo gedit /etc/ipsec.conf
+
+(gedit:12533): Tepl-[1;33mWARNING[0m **: [34m22:37:53.881[0m: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo systemctl restart ipsec
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo system s[K[Kctl status ipsecx[K
+[?1h=[0;1;32m●[0m strongswan-starter.service - strongSwan IPsec IKEv1/IKEv2 daemon using ipsec.conf[m
+     Loaded: loaded (/lib/systemd/system/strongswan-starter.service; disabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Mon 2021-09-06 22:38:21 CEST; 16s ago[m
+   Main PID: 12555 (starter)[m
+      Tasks: 18 (limit: 5811)[m
+     Memory: 3.5M[m
+     CGroup: /system.slice/strongswan-starter.service[m
+             ├─12555 /usr/lib/ipsec/starter --daemon charon --nofork[m
+             └─12559 /usr/lib/ipsec/charon[m
+[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] adding DNS server failed[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] adding DNS server failed[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[CFG] handling INTERNAL_IP4_DNS attribute failed[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] adding DNS server failed[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[CFG] handling INTERNAL_IP4_DNS attribute failed[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] installing new virtual IP 10.10.10.1[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[CFG] selected proposal: ESP:AES_CBC_256/HMAC_SHA2_256_128/NO_EXT_SEQ[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] CHILD_SA ikev2-rw{1} established with SPIs cd9fefaa_i c1c05b63_o and TS 10.10.10.1/32 === 0.0.0.0/0[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] CHILD_SA ikev2-rw{1} established with SPIs cd9fefaa_i c1c05b63_o and TS 10.10.10.1/32 === 0.0.0.0/0[m
+sep 06 22:38:21 user-VirtualBox charon[12559]: 02[IKE] peer supports MOBIKE[m
+[K[?1l>]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ q[Kcurl upi[K[K[Kipinfo.io/ip
+curl: (6) Could not resolve host: ipinfo.io
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ curl ipinfo.io/ipsudo systemctl status ipsec[1@restart[C[C[C[C[C[C[1Pstatus[C[C[C[C[C[C[1@restart[C[C[C[C[C[C[2Pgedit /etc/ipsec.confsecretscp ca-cert.pem /etc/ipsec.d/cacerts/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpwd[Ksudo cp ca-cert.pem /etc/ipsec.d/cacerts/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgedit /etc/ipsec.secrets[3Pconfsystemctl restart ipsec[1Pstatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcurl ipinfo.io/ip[Kcurl ipinfo.io/ipsudo systemctl status ipsec[1@restart[C[C[C[C[C[C[2Pgedit /etc/ipsec.conf[1P.conf[1P.conf[1P.conf[1P.conf[1P.confr.confe.confs.confo.confl.confv.conf
+
+(gedit:12706): Tepl-[1;33mWARNING[0m **: [34m22:48:20.692[0m: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo gedit /etc/resolv.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcurl ipinfo.io/ipsudo systemctl status ipsec[1@restart[C[C[C[C[C[C
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo systemctl restart ipsec[1Pgedit /etc/resolv.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcurl ipinfo.io/ipsudo systemctl status ipsec
+[?1h=[0;1;32m●[0m strongswan-starter.service - strongSwan IPsec IKEv1/IKEv2 daemon using ipsec.conf[m
+     Loaded: loaded (/lib/systemd/system/strongswan-starter.service; disabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Mon 2021-09-06 22:48:29 CEST; 3s ago[m
+   Main PID: 12724 (starter)[m
+      Tasks: 18 (limit: 5811)[m
+     Memory: 3.5M[m
+     CGroup: /system.slice/strongswan-starter.service[m
+             ├─12724 /usr/lib/ipsec/starter --daemon charon --nofork[m
+             └─12728 /usr/lib/ipsec/charon[m
+[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] adding DNS server failed[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] adding DNS server failed[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[CFG] handling INTERNAL_IP4_DNS attribute failed[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] adding DNS server failed[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[CFG] handling INTERNAL_IP4_DNS attribute failed[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] installing new virtual IP 10.10.10.1[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[CFG] selected proposal: ESP:AES_CBC_256/HMAC_SHA2_256_128/NO_EXT_SEQ[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] CHILD_SA ikev2-rw{1} established with SPIs c07297d3_i cf8652bb_o and TS 10.10.10.1/32 === 0.0.0.0/0[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] CHILD_SA ikev2-rw{1} established with SPIs c07297d3_i cf8652bb_o and TS 10.10.10.1/32 === 0.0.0.0/0[m
+sep 06 22:48:29 user-VirtualBox charon[12728]: 15[IKE] peer supports MOBIKE[m
+[K[?1l>]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo systemctl status ipsec[1@restart[C[C[C[C[C[C[1Pgedit /etc/resolv.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcurl ipinfo.io/ip
+13.48.248.81]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ curl ipinfo.io/ip
+13.48.248.81]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo ipsec statusall
+Status of IKE charon daemon (strongSwan 5.8.2, Linux 5.11.0-27-generic, x86_64):
+  uptime: 11 minutes, since Sep 06 22:48:29 2021
+  malloc: sbrk 2838528, mmap 0, used 825008, free 2013520
+  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 3
+  loaded plugins: charon aesni aes rc2 sha2 sha1 md5 mgf1 random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pkcs8 pkcs12 pgp dnskey sshkey pem openssl fips-prf gmp agent xcbc hmac gcm drbg attr kernel-netlink resolve socket-default connmark farp stroke updown eap-identity eap-aka eap-md5 eap-gtc eap-mschapv2 eap-dynamic eap-radius eap-tls eap-ttls eap-peap eap-tnc xauth-generic xauth-eap xauth-pam tnc-tnccs dhcp lookip error-notify certexpire led addrblock unity counters
+Listening IP addresses:
+  192.168.2.92
+Connections:
+    ikev2-rw:  %any...13.48.248.81  IKEv1/2
+    ikev2-rw:   local:  [user] uses EAP_MSCHAPV2 authentication with EAP identity '%any'
+    ikev2-rw:   remote: [ec2-13-48-248-81.eu-north-1.compute.amazonaws.com] uses public key authentication
+    ikev2-rw:   child:  dynamic === 0.0.0.0/0 TUNNEL
+Security Associations (1 up, 0 connecting):
+    ikev2-rw[1]: ESTABLISHED 11 minutes ago, 192.168.2.92[user]...13.48.248.81[ec2-13-48-248-81.eu-north-1.compute.amazonaws.com]
+    ikev2-rw[1]: IKEv2 SPIs: e5565c4aab584d2f_i* 45b6d52473dff5e1_r, EAP reauthentication in 2 hours
+    ikev2-rw[1]: IKE proposal: CHACHA20_POLY1305/PRF_HMAC_SHA2_512/CURVE_25519
+    ikev2-rw{1}:  INSTALLED, TUNNEL, reqid 1, ESP in UDP SPIs: c07297d3_i cf8652bb_o
+    ikev2-rw{1}:  AES_CBC_256/HMAC_SHA2_256_128, 3376 bytes_i (32 pkts, 298s ago), 23903 bytes_o (314 pkts, 16s ago), rekeying in 35 minutes
+    ikev2-rw{1}:   10.10.10.1/32 === 0.0.0.0/0
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ SSS[K[K[Kipsec-[K --[K[K[K [K --listcounters
+/usr/sbin/ipsec: unknown option `--listcounters' (perhaps command name was omitted?)
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ipsec --listcounters[C[C[1Plistcounters[1Plistcounters
+connecting to 'unix:///var/run/charon.ctl' failed: Permission denied
+failed to connect to stroke socket 'unix:///var/run/charon.ctl'
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo ipsex [K[Kc listcounters
+[sudo] password for user: 
+
+List of IKE counters:
+
+ikeInitRekey                  0
+ikeRspRekey                   0
+ikeChildSaRekey               0
+ikeInInvalid                  0
+ikeInInvalidSpi               0
+ikeInInitReq                  0
+ikeInInitRsp                  2
+ikeOutInitReq                 2
+ikeOutInitRsp                 0
+ikeInAuthReq                  0
+ikeInAuthRsp                  5
+ikeOutAuthReq                 5
+ikeOutAuthRsp                 0
+ikeInCrChildReq               0
+ikeInCrChildRsp               0
+ikeOutCrChildReq              1
+ikeOutCrChildRsp              0
+ikeInInfoReq                  0
+ikeInInfoRsp                  0
+ikeOutInfoReq                 0
+ikeOutInfoRsp                 0
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ^C
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ^C
+]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2021-09-06 23:50:23+02:00 [COMMAND_EXIT_CODE="130"]
